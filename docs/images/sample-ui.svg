@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .bg { fill: #f7fafc; }
+      .panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; rx: 14; ry: 14; }
+      .header { fill: #102a43; font: 700 24px 'Segoe UI', Arial, sans-serif; }
+      .sub { fill: #486581; font: 500 14px 'Segoe UI', Arial, sans-serif; }
+      .label { fill: #243b53; font: 600 15px 'Segoe UI', Arial, sans-serif; }
+      .text { fill: #334e68; font: 500 13px 'Segoe UI', Arial, sans-serif; }
+      .btn { fill: #0ea5e9; rx: 10; ry: 10; }
+      .btntext { fill: #ffffff; font: 700 14px 'Segoe UI', Arial, sans-serif; }
+      .code { fill: #1f2937; font: 500 12px Consolas, monospace; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="700"/>
+  <rect class="panel" x="40" y="32" width="1120" height="636"/>
+  <text x="72" y="78" class="header">Adversarial-Resilient Research Agent</text>
+  <text x="72" y="104" class="sub">Interactive frontend for defended vs vulnerable mode testing</text>
+
+  <text x="72" y="146" class="label">Research Goal</text>
+  <rect class="panel" x="72" y="158" width="1056" height="60"/>
+  <text x="88" y="194" class="text">Compare prompt-injection defenses for LLM research agents</text>
+
+  <text x="72" y="252" class="label">Source URLs (one per line)</text>
+  <rect class="panel" x="72" y="264" width="760" height="220"/>
+  <text x="88" y="294" class="code">https://example.com/article1</text>
+  <text x="88" y="318" class="code">https://example.com/article2</text>
+  <text x="88" y="342" class="code">https://example.com/adversarial-test</text>
+
+  <text x="860" y="252" class="label">Mode</text>
+  <rect class="panel" x="860" y="264" width="268" height="54"/>
+  <text x="876" y="298" class="text">defended</text>
+
+  <rect class="btn" x="860" y="340" width="268" height="46"/>
+  <text x="955" y="369" class="btntext">Run Research</text>
+
+  <text x="72" y="524" class="label">Result Preview</text>
+  <rect class="panel" x="72" y="536" width="1056" height="108"/>
+  <text x="88" y="565" class="code">{</text>
+  <text x="106" y="589" class="code">"summary": "Structured summary produced from provided sources.",</text>
+  <text x="106" y="611" class="code">"citations": ["https://example.com/article1","https://example.com/article2"]</text>
+  <text x="88" y="634" class="code">}</text>
+</svg>
+

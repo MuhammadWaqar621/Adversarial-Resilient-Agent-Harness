@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <style>
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #102a43; }
+      .label { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #102a43; }
+      .text { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #243b53; }
+      .box { rx: 14; ry: 14; stroke: #243b53; stroke-width: 2; }
+      .trusted { fill: #e6f6ff; }
+      .untrusted { fill: #fff4e6; }
+      .core { fill: #f0fff4; }
+      .out { fill: #f5f3ff; }
+      .arrow { stroke: #243b53; stroke-width: 2.2; marker-end: url(#arrow); fill: none; }
+      .zone { fill: none; stroke: #9fb3c8; stroke-dasharray: 8 6; stroke-width: 2; rx: 16; ry: 16; }
+      .zone-label { font: 700 16px 'Segoe UI', Arial, sans-serif; fill: #486581; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#243b53"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="1120" height="640" fill="#ffffff"/>
+  <text x="60" y="86" class="title">Adversarial-Resilient Agent Harness Architecture</text>
+
+  <rect x="60" y="120" width="760" height="520" class="zone"/>
+  <text x="78" y="146" class="zone-label">Trusted Control Plane</text>
+
+  <rect x="860" y="120" width="280" height="520" class="zone"/>
+  <text x="878" y="146" class="zone-label">Untrusted Surface</text>
+
+  <rect x="110" y="190" width="220" height="84" class="box trusted"/>
+  <text x="132" y="223" class="label">User Input</text>
+  <text x="132" y="247" class="text">Goal + URLs</text>
+
+  <rect x="390" y="190" width="240" height="84" class="box trusted"/>
+  <text x="420" y="223" class="label">CLI / Streamlit UI</text>
+  <text x="420" y="247" class="text">Entry point</text>
+
+  <rect x="390" y="330" width="240" height="96" class="box core"/>
+  <text x="444" y="365" class="label">ResearchAgent</text>
+  <text x="412" y="389" class="text">Orchestrates fetch, prompt, validate</text>
+
+  <rect x="110" y="330" width="220" height="96" class="box trusted"/>
+  <text x="152" y="365" class="label">Security Controls</text>
+  <text x="132" y="389" class="text">URL policy, injection signals</text>
+
+  <rect x="110" y="500" width="220" height="96" class="box trusted"/>
+  <text x="168" y="535" class="label">Output Guard</text>
+  <text x="128" y="559" class="text">Schema check + redaction</text>
+
+  <rect x="390" y="500" width="240" height="96" class="box trusted"/>
+  <text x="476" y="535" class="label">LLM Client</text>
+  <text x="422" y="559" class="text">OpenAI responses JSON mode</text>
+
+  <rect x="900" y="280" width="200" height="110" class="box untrusted"/>
+  <text x="934" y="317" class="label">Web Pages</text>
+  <text x="924" y="341" class="text">Adversary-controlled</text>
+  <text x="940" y="361" class="text">content</text>
+
+  <rect x="900" y="470" width="200" height="110" class="box out"/>
+  <text x="928" y="507" class="label">Structured Output</text>
+  <text x="918" y="531" class="text">summary, points, citations</text>
+
+  <path d="M330 232 L390 232" class="arrow"/>
+  <path d="M510 274 L510 330" class="arrow"/>
+  <path d="M390 378 L330 378" class="arrow"/>
+  <path d="M220 426 L220 500" class="arrow"/>
+  <path d="M330 548 L390 548" class="arrow"/>
+  <path d="M630 548 L900 548" class="arrow"/>
+  <path d="M630 378 L900 335" class="arrow"/>
+  <path d="M900 370 L630 410" class="arrow"/>
+</svg>
+

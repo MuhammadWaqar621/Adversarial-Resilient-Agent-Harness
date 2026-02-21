@@ -1,0 +1,31 @@
+[project]
+name = "adversarial-resilient-agent-harness"
+version = "0.1.0"
+description = "Take-home test: adversarial-resilient research agent harness"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.40.0",
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.0",
+  "python-dotenv>=1.0.1",
+  "streamlit>=1.39.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
